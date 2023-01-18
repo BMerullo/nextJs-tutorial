@@ -11,6 +11,7 @@ const DashboardSWR = () => {
   const { data, error } = useSWR("dashboard", fetcher);
 
   if (error) return "An Error has occured";
+  console.log(error);
   if (!data) return "Loading";
 
   return (
