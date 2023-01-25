@@ -4,7 +4,7 @@ import React from "react";
 const CommentId = ({ comment }) => {
   return (
     <div>
-      {comment.id} | {comment.text}
+      {comment.id}. {comment.text}
     </div>
   );
 };
