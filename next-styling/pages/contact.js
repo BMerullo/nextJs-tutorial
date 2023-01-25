@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "../styles/Contact.module.css";
 
 export const Contact = () => {
-  return <h2>Contact Page</h2>;
+  return <div className={styles.highlight}>Contact Page</div>;
 };
 
 export default Contact;

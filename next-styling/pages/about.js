@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "../styles/About.module.css";
 
 export const About = () => {
-  return <button className="btn btn-success">Primary</button>;
+  return <div className={styles.highlight}>About Page</div>;
 };
 
 export default About;
