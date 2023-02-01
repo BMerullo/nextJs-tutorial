@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "../styles/About.module.css";
+import styles from "../styles/About.module.scss";
 
 export const About = () => {
-  return <div className={styles.highlight}>About Page</div>;
+  return <div className={styles.highlightscss}>About Page</div>;
 };
 
 export default About;
