@@ -1,8 +1,17 @@
 import React from "react";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 const About = () => {
-  return <h1 className="content">About</h1>;
+  return (
+    <>
+      <Head>
+        <title>About Codevolution</title>
+        <meta name="description" content="Free tutorials on web development" />
+      </Head>
+      <h1 className="content">About</h1>
+    </>
+  );
 };
 
 export default About;
