@@ -1,10 +1,10 @@
-import Image from "next/image";
-import img from "../public/1.jpg";
+// import Image from "next/image";
+// import img from "../public/1.jpg";
 
 const PetsPage = () => {
   return (
     <div>
-      <Image
+      {/* <Image
         src={img}
         placeholder="blur"
         blurDataURL="blur"
@@ -18,7 +18,8 @@ const PetsPage = () => {
             <Image src={`/${path}.jpg`} alt="pet" width="280" height="420" />
           </div>
         );
-      })}
+      })} */}
+      Pets
     </div>
   );
 };

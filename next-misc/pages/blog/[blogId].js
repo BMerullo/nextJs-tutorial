@@ -1,6 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Blog = ({ title, description }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <Head>
@@ -14,7 +19,14 @@ const Blog = ({ title, description }) => {
 
 export default Blog;
 
-export async function getServerSideProps() {
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { blogId: "1" } }],
+    fallback: false,
+  };
+}
+
+export async function getStaticProps() {
   return {
     props: { title: "Article Title", description: "Article description" },
   };
