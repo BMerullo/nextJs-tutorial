@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link"
+import { signIn, signOut, useSession } from "next-auth/react"
 
 function Navbar() {
-  const { data: session } = useSession();
-  console.log({ session });
+  const { data: session } = useSession()
+  // console.log({ session });
 
   return (
     <nav className="header">
@@ -25,7 +25,7 @@ function Navbar() {
             <Link
               href="/api/auth/signout"
               onClick={(e) => {
-                e.preventDefault(), signOut();
+                e.preventDefault(), signOut()
               }}
             >
               Sign Out
@@ -36,7 +36,7 @@ function Navbar() {
             <Link
               href="/api/auth/signin"
               onClick={(e) => {
-                e.preventDefault(), signIn();
+                e.preventDefault(), signIn()
               }}
             >
               Sign In
@@ -45,7 +45,7 @@ function Navbar() {
         )}
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

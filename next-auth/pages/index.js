@@ -2,10 +2,13 @@ import Head from "next/head"
 import Image from "next/image"
 import { Inter } from "@next/font/google"
 import styles from "@/styles/Home.module.css"
+import { useSession } from "next-auth/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
+  const { data: session, status } = useSession()
+  console.log({ session, status })
   return (
     <>
       <Head>
@@ -16,6 +19,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
+          <h1>{session ? `${session.user.name},` : ""}</h1>
+
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>pages/index.js</code>
